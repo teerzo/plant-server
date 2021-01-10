@@ -2,7 +2,7 @@ org: teerzo
 app: plants-server
 component: express
 name: express
-stage: develop
+stage: ${STAGE} 
 
 inputs:
   src: ./
