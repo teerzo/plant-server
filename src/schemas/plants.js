@@ -1,7 +1,6 @@
-
 const mongoose = require('mongoose');
 
-const plantSchema = mongoose.Schema({
+const PlantsSchema = mongoose.Schema({
     name: String,
 
     rarity: String,
@@ -20,6 +19,6 @@ const plantSchema = mongoose.Schema({
     // }
 });
 
-const Plants = mongoose.model('plants', plantSchema);
-
-module.exports = { ModelPlant: Plants };
+module.exports = {
+    PlantsSchema
+}
