@@ -2,7 +2,6 @@ org: teerzo
 app: plants-server
 component: express
 name: express
-stage: ${param:STAGE} 
 
 inputs:
   src: ./
