@@ -30,10 +30,11 @@ if (process.env.STAGE === 'staging') {
   app.listen(PORT, () => console.log(`Server Running on Port: http://localhost:${PORT}`));
 }
 
-module.exports = serverless(app, {
-  request: function (req, event, context) {
-    context.callbackWaitsForEmptyEventLoop = false;
-    req.event = event;
-    req.context = context;
-  },
-});
+module.exports = app;
+// module.exports = serverless(app, {
+//   request: function (req, event, context) {
+//     context.callbackWaitsForEmptyEventLoop = false;
+//     req.event = event;
+//     req.context = context;
+//   },
+// });
