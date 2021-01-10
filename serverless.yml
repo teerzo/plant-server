@@ -2,7 +2,7 @@ org: teerzo
 app: plants-server
 component: express
 name: express
-stage: ${STAGE} 
+stage: ${param:STAGE} 
 
 inputs:
   src: ./
@@ -10,4 +10,4 @@ inputs:
 provider:
   name: aws
   environment:
-    MONGO_URI: ${MONGO_URI}
+    MONGO_URI: ${param:MONGO_URI}
