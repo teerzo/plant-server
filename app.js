@@ -20,7 +20,7 @@ app.use(cors());
 app.use('/plants', routePlants);
 // app.use('/users', routeUsers);
 
-if (process.env.stage === 'local') {
+if (process.env.STAGE === 'staging') {
   // lazy local server to run locally, look into serverless offline to replace this 
   const PORT = process.env.PORT || 5000;
   app.listen(PORT, () => console.log(`Server Running on Port: http://localhost:${PORT}`));
