@@ -7,6 +7,7 @@ const connectToDatabase = async (req, res) => {
         // const query = '?authSource=admin&replicaSet=atlas-6bavsy-shard-0&readPreference=primary&appname=MongoDB%20Compass&ssl=true';
         const CONNECTION_URL = `${process.env.MONGO_URI}${query}`;
         // const PORT = process.env.PORT || 5000;
+        console.log('connection url', CONNECTION_URL);
         try {
             conn = mongoose.createConnection(CONNECTION_URL, { useNewUrlParser: true, useUnifiedTopology: true });
             await conn;
@@ -17,8 +18,9 @@ const connectToDatabase = async (req, res) => {
         }
     }
     else {
-        console.log('failed to connect');
-        res.status(500).json({ message: 'failed to connect to database' });
+        console.log('failed to connect', process.env);
+        // throw({ message: 'failed to connect to database' });
+        // res.status(500).json({ message: 'failed to connect to database' });
     }
 };
 
