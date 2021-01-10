@@ -25,7 +25,7 @@ app.use('/plants', routePlants);
 
 if (process.env.MONGO_URI) {
   console.log('found mongodb uri');
-  const query = '?authSource=admin';
+  const query = '';
   // const query = '?authSource=admin&replicaSet=atlas-6bavsy-shard-0&readPreference=primary&appname=MongoDB%20Compass&ssl=true';
   const CONNECTION_URL = `${process.env.MONGO_URI}${query}`;
   const PORT = process.env.PORT || 5000;
