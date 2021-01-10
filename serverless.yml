@@ -6,3 +6,8 @@ stage: develop
 
 inputs:
   src: ./
+
+provider:
+  name: aws
+  environment:
+    MONGO_URI: ${MONGO_URI}
