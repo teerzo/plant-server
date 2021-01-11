@@ -2,11 +2,13 @@ org: teerzo
 app: plants-server
 component: express
 name: express
+stage: develop
 
 inputs:
   src: ./
   env: 
     MONGO_URI: ${params:MONGO_URI}
+    MONGO_URI2: ${output:${stage}:${params:MONGO_URI}}
 
 provider:
   name: aws
