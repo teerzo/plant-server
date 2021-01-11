@@ -5,6 +5,8 @@ name: express
 
 inputs:
   src: ./
+  env: 
+    MONGO_URI: ${output:${stage}:${app}:${params:MONGO_URI}}
 
 provider:
   name: aws
