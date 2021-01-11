@@ -9,4 +9,4 @@ inputs:
 provider:
   name: aws
   environment:
-    MONGO_URI: ${param:MONGO_URI}
+    MONGO_URI: ${output:${stage}:${app}:${params:MONGO_URI}}
