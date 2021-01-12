@@ -10,7 +10,7 @@ inputs:
     MONGO_URI: ${params:MONGO_URI}
     MONGO_URI2: ${output:${stage}:${params:MONGO_URI}}    
     MONGO_URI3: ${output:${stage}:${app}:MONGO_URI}
-    MONGO_URI4: ${output:${stage}:${app}:my-table.name}
+    MONGO_URI4: ${output:${stage}:${app}:${params:MONGO_URI}}
 
 provider:
   name: aws
