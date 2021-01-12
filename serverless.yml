@@ -8,10 +8,12 @@ inputs:
   src: ./
   env: 
     MONGO_URI: ${param:MONGO_URI}
+    MONGO2: TEST
+    MONGO3: ${output:${param:MONGO_URI}}
     # MONGO_URI: ${params:MONGO_URI}
-    MONGO_URI2: ${output:${stage}:${params:MONGO_URI}}    
-    MONGO_URI3: ${output:${stage}:${app}:MONGO_URI}
-    MONGO_URI4: ${output:${stage}:${app}:${param:MONGO_URI}} 
+    # MONGO_URI2: ${output:${stage}:${params:MONGO_URI}}    
+    # MONGO_URI3: ${output:${stage}:${app}:MONGO_URI}
+    # MONGO_URI4: ${output:${stage}:${app}:${param:MONGO_URI}} 
     # MONGO_URI4: ${output:${stage}:${app}:${params:MONGO_URI}} 
       # develop.plants-server.MONGO_URI" 
 
