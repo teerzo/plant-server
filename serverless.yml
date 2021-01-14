@@ -2,7 +2,8 @@ org: teerzo
 app: plants-server
 component: express
 name: express
-stage: production 
 
 inputs:
   src: ./
+  env: 
+    MONGO_URI: ${param:MONGO_URI}
